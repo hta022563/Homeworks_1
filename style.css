@@ -40,15 +40,29 @@
     .Register {
         padding: 7px 15px;
         z-index: 3;
-        border: 2px solid white;
+        border: 2px solid none;
         border-radius: 10px;
         color: rgb(228, 158, 28);
         font-weight: bold;
         cursor: pointer;
         background-color: white;
         font-size: 17px;
-        
-        
+        position: relative;
+    }
+    .Register::before {
+   content: "";
+    position: absolute;
+    background: #2d2c2c;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    transition: all 0.5s  ;
+    z-index: -1;
+    border-radius: 10px;
+    }
+    .Register:hover::before{
+        width: 100%;
     }
     .Login {
         color: white;
@@ -58,7 +72,10 @@
     .search {
         cursor: pointer;
         color: white;
-        font-size: 17px;
+        font-size: 19px;
+    }
+    .search:hover {
+        color: rgb(221, 221, 249);
     }
     nav ul {
         display: flex;
@@ -66,14 +83,23 @@
         gap: 60px;
         font-size: 17px;
     }
-    .nav ul:hover {
-        transform: scale(1.2);
+   nav ul li a:hover {
+    color: rgb(245, 239, 161);
+    transition: all 0.4s ease;
     }
+  nav ul li:hover {
+    transform: translateY(-4px);
+    transition: all 0.4s ease;
+  }
     .name {
         color: orange;
         font-weight: 200px;
         font-size: 23px;
-       
+        cursor: pointer;
+    }
+    .name:hover {
+        color: rgb(247, 81, 81);
+        transition: all 0.3s ease-out;
     }
     ul a {
         text-decoration: none;
@@ -135,6 +161,16 @@ border-radius: 5px;
        border-radius: 10px;
        box-shadow: 3px 5px 5px 0 rgb(240, 240, 240);
     }
+    .icon:hover {
+        animation: shake 1.7s infinite;
+    }
+    @keyframes shake {
+        0% { transform: rotate(0deg); }
+        25% { transform: rotate(-20deg); }
+        50% { transform: rotate(10deg); }
+        75% { transform: rotate(-10deg); }
+        100% { transform: rotate(0deg); }
+      }
     .all_icon {
         display: flex;
         justify-content: center;
@@ -181,6 +217,9 @@ border-radius: 5px;
     height: 400px;
     border-radius: 8px;
   }
+  .img_div:hover {
+   transform: scale(1.05);
+  }
   .img_div img {
     width: 100%;
     height: 100%;
@@ -212,6 +251,9 @@ border-radius: 5px;
     font-size: 25px;
     cursor: pointer;
     z-index: 100;
+  }
+  .key:hover {
+    transform: scale(1.1);
   }
   .see {
 text-align: center;
