@@ -2,15 +2,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    }
+}
     .girl {
-        z-index: -10;
-        position: absolute;
-        width: 100%;
-        height: 750px;
-        overflow: hidden;
+      z-index: -10;
+      background-image: url(picture/girl.png);
+      background-size: cover;
+      position: absolute;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 750px;
+      width: 100%;
     }
     .container_img {
+      z-index: -9;
+      height: 750px;
+      width: 100%;
+      position:absolute;
       overflow: hidden;
     }
     .black_girl {
@@ -18,7 +25,7 @@
         width: 100%;
         height: 750px;
         z-index: -8;
-        background-color: rgba(0, 0, 0, 0.4); 
+        background-color: rgba(8, 6, 6, 0.4); 
     }
     .container {
        max-width: 1300px;
@@ -273,18 +280,18 @@ padding-left: 900px;
   .name i {
     display: none;
   }
-  @media only screen and (max-width:500px) {
+  @media only screen and (max-width:768px) {
     .container_img {
         width: 100%;
         overflow: hidden;
     }
     .girl {
       height: 500px;
-      width: 700px;
+      width: 100%;
     }
     .black_girl {
       position: absolute;
-     width: 700px;
+     width: 100%;
       height: 500px;
     }
     .Text_content {
@@ -301,7 +308,7 @@ padding-left: 900px;
       font-size: 23px;
   }
   .container {
-    max-width: 500px;
+    max-width: 700px;
     margin: 0 auto;
     padding: 10px;
 }
@@ -333,7 +340,7 @@ padding-left: 900px;
   display: block;
 }
 .three_acc {
-  margin-top: 90px;
+  margin-top: 110px;
   height: 180px;
   width: 400px;
   background-color:transparent;
