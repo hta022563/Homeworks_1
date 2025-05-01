@@ -274,6 +274,10 @@ padding-left: 900px;
     display: none;
   }
   @media only screen and (max-width:500px) {
+    .container_img {
+        width: 100%;
+        overflow: hidden;
+    }
     .girl {
       height: 500px;
       width: 700px;
