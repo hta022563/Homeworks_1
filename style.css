@@ -10,6 +10,9 @@
         height: 750px;
         overflow: hidden;
     }
+    .container_img {
+      overflow: hidden;
+    }
     .black_girl {
         position: absolute;
         width: 100%;
@@ -264,17 +267,21 @@ padding-left: 900px;
     color: orange;
     font-size: 30px;
   }
+  .user_icon {
+    display: none;
+  }
+  .name i {
+    display: none;
+  }
   @media only screen and (max-width:500px) {
     .girl {
       height: 500px;
       width: 700px;
-      overflow: hidden;
     }
     .black_girl {
       position: absolute;
      width: 700px;
       height: 500px;
-      overflow: hidden;
     }
     .Text_content {
       font-size: 38px;
@@ -310,6 +317,7 @@ padding-left: 900px;
   font-size: 30px;
   color: orange;
   cursor: pointer;
+  display: block;
 }
 .name {
   display: flex;
@@ -318,6 +326,7 @@ padding-left: 900px;
   font-size: 20px;
   margin-right: 10px;
   cursor: pointer;
+  display: block;
 }
 .three_acc {
   margin-top: 90px;
@@ -380,7 +389,6 @@ padding-left: 900px;
 .img_container {
   position: relative;
   display: flex;
-  overflow: hidden;
   gap: 20px;
   justify-content: center;
   padding: 20px;
@@ -390,4 +398,4 @@ padding-left: 900px;
   cursor: pointer;
   font-size: 15px;
 }
-  }
+}
