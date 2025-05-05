@@ -108,10 +108,6 @@
         font-size: 23px;
         cursor: pointer;
     }
-    .name:hover {
-        color: rgb(247, 81, 81);
-        transition: all 0.3s ease-out;
-    }
     ul a {
         text-decoration: none;
         color: aliceblue;
@@ -280,7 +276,45 @@ padding-left: 900px;
   .name i {
     display: none;
   }
+  .bars {
+    display: none;
+  }
   @media only screen and (max-width:768px) {
+    .close_icon {
+      display: block;
+      z-index: 9;
+    }
+    nav {
+      position: fixed;
+      background-color: rgb(235, 235, 235);
+      right: -100%;
+      top: 0;
+      width: 50%;
+      height: 100vh;
+      background-color: rgb(248, 227, 174);
+      padding: 20px;
+      text-align: center;
+      z-index: 2;
+      transition: all 0.5s ease;
+     }
+     nav ul{
+      flex-direction: column;
+      gap: 50px;
+      
+      padding-top: 200px;
+     }
+     nav ul li a{
+      color: #f58448;
+     }
+     nav ul li a:hover{
+      color: #f91414;
+      font-size: 22px;
+       text-decoration: wavy;
+     }
+     nav.active {
+      right: 0;
+      display: block;
+     }
     .container_img {
         width: 100%;
         overflow: hidden;
@@ -312,15 +346,12 @@ padding-left: 900px;
     margin: 0 auto;
     padding: 10px;
 }
-.name {
+.Name {
   color: orange;
   font-weight: 200px;
   font-size: 10px;
-  cursor: pointer;
+  gap: 10px;
   }
-  nav ul {
-   display: none;
-}
 .search, .Login, .Register {
   display: none;
 }
@@ -329,6 +360,7 @@ padding-left: 900px;
   color: orange;
   cursor: pointer;
   display: block;
+  z-index: 9;
 }
 .name {
   display: flex;
@@ -336,7 +368,6 @@ padding-left: 900px;
 .name i {
   font-size: 20px;
   margin-right: 10px;
-  cursor: pointer;
   display: block;
 }
 .three_acc {
@@ -409,4 +440,17 @@ padding-left: 900px;
   cursor: pointer;
   font-size: 15px;
 }
+.bars {
+  cursor: pointer;
+  color: #f58448;
+  z-index: 9;
+  font-size: 20px;
+  display: block;
 }
+.bars:hover {  color: rgb(255, 255, 255);
+transition: all 0.3s ease-out;
+}
+#close-icon {
+  font-size: 25px;
+}
+  }
